@@ -1,0 +1,48 @@
+<div class="container">
+  <br/>
+  <h3>Student Searching Job Progress Report</h3>
+  <br/>
+  
+  
+  <input class="form-control mr-sm-2 app-search" type="text" placeholder="Search student" (keyup)="search($event)">
+  <br/><br/>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Student Name</th>
+       
+        <th scope="col">Number of Company Applied</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr class="" *ngFor="let application of applications">
+        <th scope="row">{{application.companyName}}</th>
+        <td>{{application.companyName}}</td>
+        <td>{{application.city}}</td>
+        <td>{{application.email}}</td>
+        <td>{{application.resumeVersion}}</td>
+        <td data = "data">
+          <i class="fa fa-edit cursor-class" (click) = "editApplication(application)"></i>
+          &nbsp;
+          <i class="fa fa-remove cursor-class" (click) = "deleteApplication(application)"></i>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table> 
+  <div class="float-right">
+      <ul class="pagination pagination-sm">
+        <li class="page-item disabled">
+          <a class="page-link" href="#">&laquo;</a>
+        </li>
+        <li class="page-item active">
+          <a class="page-link" href="#">1</a>
+        </li>
+        
+        <li class="page-item disabled">
+          <a class="page-link " href="#">&raquo;</a>
+        </li>
+      </ul>
+    </div>
+</div>
